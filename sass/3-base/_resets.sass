@@ -1,0 +1,23 @@
+@use '../1-abstracts' as abstr
+
+/* * CSS Reset & Universal Styles */
+html
+    background-color: abstr.$color-01
+
+*,
+::before,
+::after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+img
+    max-width: 100%
+
+/* * Removing default focus outline in browsers to add my own focus styles */
+a
+    &:focus 
+        outline: none
+
+::-moz-focus-inner 
+    border: 0
