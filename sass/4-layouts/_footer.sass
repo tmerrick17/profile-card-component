@@ -1,0 +1,32 @@
+@use '../1-abstracts' as abst
+
+/* * Footer Styles */
+footer
+    font-size: abst.$font-sm
+    text-align: center
+    position: relative
+    margin: auto 0 abst.$space-xs
+
+    p
+        color: hsl(0, 0%, 0%)
+
+/* * Footer Link Hover and Focus Styles */
+.footer__link
+    color: abst.$color-blue-dark
+    position: relative
+
+    &:hover, 
+    &:focus
+        color: abst.$color-blue-gray
+
+    &:hover 
+        text-decoration: none
+
+    &:focus::after
+        content: ""
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 2px
+        background: abst.$color-cyan

@@ -5,8 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
   
-  <title>Frontend Mentor | Profile card component</title>
+  <title>Profile card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -15,21 +21,38 @@
   </style>
 </head>
 <body>
-  Victor Crest
-  26
-  London
 
-  80K
-  Followers
+  <main class="grid-center">
+    <section class="card">
 
-  803K
-  Likes
+      <div class="card__background"></div>
+      <img class="card__picture" src="/images/image-victor.jpg" alt="Victor Crest medium shot">
+      <h1 class="card__name">Victor Crest <span class="card__age">26</span></h1>
+      <p class="card__city">London</p>
+      
+      <div class="card__stats-group">
 
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <div class="card__subgroup">
+          <h2 class="card__subgroup--stat">80K</h2>
+          <p class="card__subgroup--label">Followers</p>
+        </div>
+        <div class="card__subgroup">
+          <h2 class="card__subgroup--stat">803K</h2>
+          <p class="card__subgroup--label">Likes</p>
+        </div>
+        <div class="card__subgroup">
+          <h2 class="card__subgroup--stat">1.4K</h2>
+          <p class="card__subgroup--label">Photos</p>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a class="footer__link" href="https://github.com/tmerrick17">Trevor Merrick</a>.</p>         
+  </footer>
+
 </body>
 </html>

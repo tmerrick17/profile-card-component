@@ -1,0 +1,117 @@
+/* * CSS Reset & Universal Styles */
+html {
+  font-size: 62.5%;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* * Removing default focus outline in browsers to add my own focus styles */
+a:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+/* * Html Styles */
+html {
+  background-color: #19a2ae;
+}
+
+/* * Body Styles */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+  min-height: 95vh;
+  margin-top: 1.5rem;
+}
+
+/* * Footer Styles */
+footer {
+  font-size: 1rem;
+  text-align: center;
+  position: relative;
+  margin: auto 0 0.3rem;
+}
+footer p {
+  color: black;
+}
+
+/* * Footer Link Hover and Focus Styles */
+.footer__link {
+  color: #2d3248;
+  position: relative;
+}
+.footer__link:hover, .footer__link:focus {
+  color: #6a6f81;
+}
+.footer__link:hover {
+  text-decoration: none;
+}
+.footer__link:focus::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #19a2ae;
+}
+
+.card {
+  background-color: white;
+  width: 87%;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: minmax(11rem, 12.2rem) 10.6rem minmax(11re, 12.2rem);
+  grid-template-rows: 8.6rem repeat(2, 5.3rem) 4.1rem 2.7rem 2.5rem 9rem;
+  grid-template-areas: "bkgd bkgd bkgd" "bkgd pic bkgd" ". pic ." "name name name" ". city ." ". . ." "stat stat stat";
+}
+
+.card__background {
+  background: url("../images/bg-pattern-card.svg") center/cover no-repeat;
+  min-width: 32.6rem;
+  max-width: 35rem;
+  height: 14rem;
+  grid-area: bkgd;
+}
+
+.card__picture {
+  grid-area: pic;
+}
+
+.card__name {
+  grid-area: name;
+}
+
+.card__age {
+  grid-area: age;
+}
+
+.card__city {
+  grid-area: city;
+}
+
+.card__stats-group {
+  grid-area: stat;
+}
+
+/*# sourceMappingURL=main.css.map */

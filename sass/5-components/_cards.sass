@@ -1,0 +1,33 @@
+@use '../1-abstracts' as abst
+
+.card 
+    background-color: hsl(0, 0%, 100%)
+    width: 87%
+    border-radius: 2rem
+    display: grid
+    grid-template-columns: minmax(11rem, 12.2rem) 10.6rem minmax(11re, 12.2rem)
+    grid-template-rows: 8.6rem repeat(2, 5.3rem) 4.1rem 2.7rem 2.5rem 9rem
+    grid-template-areas: "bkgd bkgd bkgd" "bkgd pic bkgd" ". pic ." "name name name" ". city ." ". . ." "stat stat stat"
+
+.card__background
+    background: url("../images/bg-pattern-card.svg") center/cover no-repeat
+    min-width: 32.6rem
+    max-width: 35rem
+    height: 14rem
+    grid-area: bkgd
+    
+.card__picture
+    grid-area: pic
+
+.card__name
+    grid-area: name
+
+.card__age
+    grid-area: age
+
+.card__city
+    grid-area: city
+
+.card__stats-group
+    grid-area: stat 
+
