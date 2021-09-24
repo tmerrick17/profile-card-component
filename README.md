@@ -32,8 +32,8 @@ Added goals added by Trevor Merrick
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/mobile-first-card-component-using-css-gridareas-and-sass-with-mixins-6-wKX4elJ)
+- Live Site URL: [Live Site URL](https://tmerrick17.github.io/profile-card-component/)
 
 ## My process
 
