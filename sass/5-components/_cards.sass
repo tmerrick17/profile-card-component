@@ -1,33 +1,67 @@
 @use '../1-abstracts' as abst
 
+/* Card Component Styles */
 .card 
     background-color: hsl(0, 0%, 100%)
     width: 87%
+    max-width: 35rem
     border-radius: 2rem
+    box-shadow: 0px 40px 60px -10px hsla(0, 0%, 0%, 0.2)
     display: grid
-    grid-template-columns: minmax(11rem, 12.2rem) 10.6rem minmax(11re, 12.2rem)
+    grid-template-columns: minmax(11rem, 12.2rem) 10.6rem minmax(11rem, 12.2rem)
     grid-template-rows: 8.6rem repeat(2, 5.3rem) 4.1rem 2.7rem 2.5rem 9rem
-    grid-template-areas: "bkgd bkgd bkgd" "bkgd pic bkgd" ". pic ." "name name name" ". city ." ". . ." "stat stat stat"
+    grid-template-areas: "bkgd1 bkgd1 bkgd1" "bkgd2 bkgd2 bkgd2" ". pic2 ." "name name name" ". city ." ". . ." "stats-left stats-center stats-right"
+    
+    /* * Smaller then 375px @media query that helps with the card not breaking */
+    @media screen and (max-width: 375px) 
+        width: 100%
 
 .card__background
     background: url("../images/bg-pattern-card.svg") center/cover no-repeat
-    min-width: 32.6rem
-    max-width: 35rem
+    width: 100%
     height: 14rem
-    grid-area: bkgd
+    border-radius: 20px 20px 0 0
+    grid-column: 1 / -1
+    
+.card__picture-container
+    grid-column: 2 / 3
     
 .card__picture
-    grid-area: pic
-
+    border-radius: 50%
+    width: 100%
+    box-shadow: 0 0 0 0.6rem hsl(0, 0%, 100%)
+    
 .card__name
     grid-area: name
+    display: flex
+    justify-content: center
+    align-items: end
 
 .card__age
-    grid-area: age
+    margin-left: 1rem
 
 .card__city
     grid-area: city
+    display: flex
+    justify-content: center
+    align-items: end
 
-.card__stats-group
-    grid-area: stat 
+.card__subgroup
+    border-top: solid 0.1rem hsla(0, 0%, 90%)
 
+.card__subgroup--left
+    grid-area: stats-left
+    +abst.flex-center
+    padding-left: abst.$space-lg
+
+.card__subgroup--center
+    grid-area: stats-center
+    +abst.flex-center
+
+.card__subgroup--right
+    grid-area: stats-right
+    +abst.flex-center
+    padding-right: abst.$space-lg
+
+.card__subgroup-stat
+    margin-bottom: abst.$space-xs

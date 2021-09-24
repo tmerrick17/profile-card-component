@@ -10,4 +10,12 @@ body
     display: flex
     flex-direction: column
     font-family: abst.$font-primary
+    background: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg')
+    background-repeat: no-repeat
+    background-position: right 35vw bottom 50vh, left 40vw top 45vh
     
+    @media screen and (min-width: 768px)
+        background-position: right 45vw bottom 50vh, left 45vw top 45vh
+
+    @media screen and (min-width: 1440px)
+        background-position: right 48vw bottom 50vh, left 50vw top 45vh
